@@ -1,0 +1,678 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VITALA — Cosmetología, Estética y Bienestar. Atención personalizada por Ayxa González en un ambiente seguro y profesional.">
+  <title>VITALA — Cosmetología • Estética • Bienestar</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header__badge">
+      <span class="badge-dot"></span>
+      <span>Agenda abierta | Citas disponibles para esta semana</span>
+    </div>
+    <div class="header__inner">
+      <a href="#hero" class="header__logo">VITALA</a>
+      <button class="header__toggle" id="menuToggle" aria-label="Menú" aria-expanded="false">☰</button>
+      <nav class="header__nav" id="mainNav">
+        <ul>
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#cauterizacion">Cauterización</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#agendamiento">Contacto</a></li>
+          <li><a href="https://instagram.com" target="_blank" rel="noopener">Síguenos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__bg"></div>
+      <!-- IMAGEN DE FONDO: assets/images/hero-bg.jpg -->
+      <div class="hero__content">
+        <p class="hero__credentials">Ayxa González — Cosmetóloga y Esteticista</p>
+        <h1 class="hero__title">VITALA</h1>
+        <p class="hero__slogan">&ldquo;Equilibrio natural para una belleza auténtica&rdquo;</p>
+        <p class="hero__value">Atención personalizada en un ambiente seguro y profesional.<br>Tu bienestar es nuestra prioridad.</p>
+        <div class="hero__actions">
+          <a href="#agendamiento" class="btn btn--primary">Agenda tu cita</a>
+          <a href="https://wa.me/573006273575" target="_blank" rel="noopener" class="btn btn--secondary">¿Tienes dudas? Escríbenos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS (TABS + GRID) -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <h2 class="section-title">Servicios</h2>
+        <div class="section-divider">
+          <span class="section-divider__diamond">◆</span>
+        </div>
+
+        <div class="tabs" id="tabsFilter">
+          <button class="tab-btn active" data-filter="all">Todos</button>
+          <button class="tab-btn" data-filter="faciales">Faciales</button>
+          <button class="tab-btn" data-filter="corporales">Corporales</button>
+          <button class="tab-btn" data-filter="masajes">Masajes</button>
+          <button class="tab-btn" data-filter="promociones">Promociones</button>
+        </div>
+
+        <div class="services-grid" id="servicesGrid">
+
+          <!-- FACIAL 1 -->
+          <div class="service-card" data-category="faciales">
+            <div class="service-card__img">
+              <span class="service-card__img-label">Limpieza Facial Profunda</span>
+              <img src="assets/images/placeholder-facial-1.jpg" alt="Limpieza Facial Profunda" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="service-card__body">
+              <h3>Limpieza Facial Profunda</h3>
+              <p>Eliminación de impurezas, células muertas y puntos negros.</p>
+              <p class="service-card__price">.000</p>
+            </div>
+          </div>
+
+          <!-- FACIAL 2 -->
+          <div class="service-card" data-category="faciales">
+            <div class="service-card__img">
+              <span class="service-card__img-label">Plasma Rico en Plaquetas</span>
+              <img src="assets/images/placeholder-facial-2.jpg" alt="Plasma Rico en Plaquetas" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="service-card__body">
+              <h3>Plasma Rico en Plaquetas</h3>
+              <p>Sesión individual. Estimula colágeno y elastina naturalmente.</p>
+              <p class="service-card__price">.000</p>
+            </div>
+          </div>
+
+          <!-- FACIAL 3 (Destacado) -->
+          <div class="service-card service-card--highlight" data-category="faciales">
+            <div class="service-card__img">
+              <span class="service-card__img-label">Limpieza Facial + PRP</span>
+              <img src="assets/images/placeholder-facial-3.jpg" alt="Limpieza Facial Profunda + Plasma Facial" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="service-card__body">
+              <h3>Limpieza Facial Profunda + Plasma Facial</h3>
+              <p class="service-card__desc">Elimina impurezas, estimula colágeno y elastina, aporta luminosidad y atenúa marcas de acné. 100% natural y seguro.</p>
+              <p class="service-card__price">.000</p>
+            </div>
+          </div>
+
+          <!-- FACIAL 4 -->
+          <div class="service-card" data-category="faciales">
+            <div class="service-card__img">
+              <span class="service-card__img-label">Tratamiento Despigmentante</span>
+              <img src="assets/images/placeholder-facial-4.jpg" alt="Tratamiento Despigmentante" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="service-card__body">
+              <h3>Tratamiento Despigmentante</h3>
+              <p>Reduce manchas y unifica el tono de la piel.</p>
+              <p class="service-card__price">.000</p>
+            </div>
+          </div>
+
+          <!-- FACIAL 5 -->
+          <div class="service-card" data-category="faciales">
+            <div class="service-card__img">
+              <span class="service-card__img-label">Tratamiento Reafirmante</span>
+              <img src="assets/images/placeholder-facial-5.jpg" alt="Tratamiento Reafirmante" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="service-card__body">
+              <h3>Tratamiento Reafirmante</h3>
+              <p>Devuelve firmeza y elasticidad al rostro.</p>
+              <p class="service-card__price">.000</p>
+            </div>
+          </div>
+
+          <!-- FACIAL 6 -->
+          <div class="service-card" data-category="faciales">
+            <div class="service-card__img">
+              <span class="service-card__img-label">Tratamiento Hidratante</span>
+              <img src="assets/images/placeholder-facial-6.jpg" alt="Tratamiento Hidratante" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="service-card__body">
+              <h3>Tratamiento Hidratante</h3>
+              <p>Hidratación profunda para una piel radiante y saludable.</p>
+              <p class="service-card__price">.000</p>
+            </div>
+          </div>
+
+          <!-- FACIAL 7 -->
+          <div class="service-card" data-category="faciales">
+            <div class="service-card__img">
+              <span class="service-card__img-label">Tratamiento Acné</span>
+              <img src="assets/images/placeholder-facial-7.jpg" alt="Tratamiento Acné" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="service-card__body">
+              <h3>Tratamiento Acné</h3>
+              <p>1 sesión. Controla brotes y reduce inflamación.</p>
+              <p class="service-card__price">.000</p>
+            </div>
+          </div>
+
+          <!-- CORPORAL 1 -->
+          <div class="service-card" data-category="corporales">
+            <div class="service-card__img">
+              <span class="service-card__img-label">Paquete 8 Sesiones</span>
+              <img src="assets/images/placeholder-corporal-1.jpg" alt="Paquete 8 Sesiones Corporales" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="service-card__body">
+              <h3>Paquete 8 Sesiones</h3>
+              <p>Reafirmante, Reductor y Anticelulitis. Reduce medidas, combate celulitis, reafirma y tonifica.</p>
+              <p class="service-card__price">
+                .000
+                <span class="service-card__old-price">.000</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- CORPORAL 2 -->
+          <div class="service-card" data-category="corporales">
+            <div class="service-card__img">
+              <span class="service-card__img-label">Paquete 12 Sesiones</span>
+              <img src="assets/images/placeholder-corporal-2.jpg" alt="Paquete 12 Sesiones Corporales" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="service-card__body">
+              <h3>Paquete 12 Sesiones</h3>
+              <p>Reafirmante, Reductor y Anticelulitis. Resultados más profundos y duraderos.</p>
+              <p class="service-card__price">
+                .000
+                <span class="service-card__old-price">.000</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- MASAJE 1 -->
+          <div class="service-card" data-category="masajes">
+            <div class="service-card__img">
+              <span class="service-card__img-label">Masaje Relajante</span>
+              <img src="assets/images/placeholder-masaje-1.jpg" alt="Masaje Relajante" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="service-card__body">
+              <h3>Masaje Relajante</h3>
+              <p class="service-card__duration">1 Hora</p>
+              <p>Desconecta y renueva tu cuerpo y mente.</p>
+              <p class="service-card__price">.000</p>
+            </div>
+          </div>
+
+          <!-- MASAJE 2 -->
+          <div class="service-card" data-category="masajes">
+            <div class="service-card__img">
+              <span class="service-card__img-label">Masaje + Chocolaterapia</span>
+              <img src="assets/images/placeholder-masaje-2.jpg" alt="Masaje Relajante con Chocolaterapia" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="service-card__body">
+              <h3>Masaje Relajante con Chocolaterapia</h3>
+              <p class="service-card__duration">1 Hora 30 Minutos</p>
+              <p>Experiencia sensorial única con chocolate.</p>
+              <p class="service-card__price">.000</p>
+            </div>
+          </div>
+
+          <!-- MASAJE 3 -->
+          <div class="service-card" data-category="masajes">
+            <div class="service-card__img">
+              <span class="service-card__img-label">Baño de Luna + Masaje</span>
+              <img src="assets/images/placeholder-masaje-3.jpg" alt="Baño de Luna + Masaje Relajante" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="service-card__body">
+              <h3>Baño de Luna + Masaje Relajante</h3>
+              <p class="service-card__duration">1 Hora 30 Minutos</p>
+              <p>Ritual de relajación profunda bajo la luz de la luna.</p>
+              <p class="service-card__price">.000</p>
+            </div>
+          </div>
+
+          <!-- MASAJE 4 -->
+          <div class="service-card" data-category="masajes">
+            <div class="service-card__img">
+              <span class="service-card__img-label">Masaje + Bambú Terapia</span>
+              <img src="assets/images/placeholder-masaje-4.jpg" alt="Masaje Relajante + Bambú Terapia" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="service-card__body">
+              <h3>Masaje Relajante + Bambú Terapia</h3>
+              <p class="service-card__duration">1 Hora</p>
+              <p>Alivia tensiones musculares con técnicas de bambú.</p>
+              <p class="service-card__price">.000</p>
+            </div>
+          </div>
+
+          <!-- PROMO 1 -->
+          <div class="service-card" data-category="promociones">
+            <div class="service-card__img">
+              <span class="service-card__img-label">Promo 2 Limpiezas</span>
+              <img src="assets/images/placeholder-promo-1.jpg" alt="Promo 2 Limpiezas Faciales" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__badge">Por tiempo limitado</span>
+              <h3>Promo 2 Limpiezas Faciales</h3>
+              <p>Dos sesiones de limpieza facial profunda al mejor precio.</p>
+              <p class="service-card__price">.000</p>
+            </div>
+          </div>
+
+          <!-- PROMO 2 -->
+          <div class="service-card" data-category="promociones">
+            <div class="service-card__img">
+              <span class="service-card__img-label">Limpieza + PRP</span>
+              <img src="assets/images/placeholder-promo-2.jpg" alt="Promo Limpieza Facial + Plasma" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__badge">Por tiempo limitado</span>
+              <h3>Promo Limpieza Facial + Plasma Rico en Plaquetas</h3>
+              <p>El combo perfecto para renovar tu piel.</p>
+              <p class="service-card__price">
+                .000
+                <span class="service-card__old-price">.000</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- PROMO 3 -->
+          <div class="service-card" data-category="promociones">
+            <div class="service-card__img">
+              <span class="service-card__img-label">Ritual Vitala</span>
+              <img src="assets/images/placeholder-promo-3.jpg" alt="Ritual Vitala" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__badge">Por tiempo limitado</span>
+              <h3>Ritual Vitala</h3>
+              <p>Limpieza facial profunda + Máscara LED + Aromaterapia &mdash; 1 Hora</p>
+              <p class="service-card__price">
+                .000
+                <span class="service-card__old-price">.000</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- PROMO 4 -->
+          <div class="service-card" data-category="promociones">
+            <div class="service-card__img">
+              <span class="service-card__img-label">Momento Zen</span>
+              <img src="assets/images/placeholder-promo-4.jpg" alt="Momento Zen" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__badge">Por tiempo limitado</span>
+              <h3>Momento Zen</h3>
+              <p>Masaje relajante + Piedras volcánicas + Manta térmica + Aromaterapia &mdash; 1 Hora</p>
+              <p class="service-card__price">
+                .000
+                <span class="service-card__old-price">.000</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- PROMO 5 -->
+          <div class="service-card" data-category="promociones">
+            <div class="service-card__img">
+              <span class="service-card__img-label">Experiencia Premium</span>
+              <img src="assets/images/placeholder-promo-5.jpg" alt="Experiencia Vitala Premium" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__badge">Por tiempo limitado</span>
+              <h3>Experiencia Vitala Premium</h3>
+              <p>Facial completo + Masaje relajante + Aromaterapia + Té de cortesía &mdash; 1 Hora 30 Min</p>
+              <p class="service-card__price">
+                .000
+                <span class="service-card__old-price">.000</span>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CAUTERIZACIÓN -->
+    <section class="section cauterizacion" id="cauterizacion">
+      <div class="container">
+        <h2 class="section-title">Cauterización</h2>
+        <p class="section-subtitle">Lunares, Verrugas y Acrocordones</p>
+        <div class="section-divider">
+          <span class="section-divider__diamond">◆</span>
+        </div>
+
+        <div class="cauterizacion__content">
+          <p class="cauterizacion__text">
+            Procedimiento <strong>rápido, seguro y sin incapacidad</strong> para eliminar lesiones cutáneas benignas
+            como lunares, verrugas y acrocordones. Realizado con técnicas de precisión que garantizan
+            resultados estéticos óptimos y una recuperación sin complicaciones.
+          </p>
+
+          <ul class="cauterizacion__list">
+            <li>Procedimiento ambulatorio sin necesidad de reposo</li>
+            <li>Resultados visibles inmediatamente después de la sesión</li>
+            <li>Técnica mínimamente invasiva con máximo cuidado estético</li>
+            <li>Atención personalizada y seguimiento post-procedimiento</li>
+          </ul>
+
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th>Tamaño</th>
+                <th>Cantidad</th>
+                <th>Precio Normal</th>
+                <th>Promoción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Pequeño</td>
+                <td>1 a 8</td>
+                <td>.000</td>
+                <td class="price-highlight">.000</td>
+              </tr>
+              <tr>
+                <td>Mediano</td>
+                <td>8 a 15</td>
+                <td>.000</td>
+                <td class="price-highlight">.000</td>
+              </tr>
+              <tr>
+                <td>Grande</td>
+                <td>8 a 15 (mayor volumen)</td>
+                <td>.000</td>
+                <td class="price-highlight">.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUEROTERAPIA -->
+    <section class="section" id="sueroterapia">
+      <div class="container">
+        <h2 class="section-title">Sueroterapia</h2>
+        <p class="section-subtitle">Bienestar e hidratación intravenosa</p>
+        <div class="section-divider">
+          <span class="section-divider__diamond">◆</span>
+        </div>
+
+        <div class="suero-card">
+          <div class="suero-card__icon">💧</div>
+          <h3>Hidratación Intravenosa para tu Bienestar</h3>
+          <p>
+            La <strong>sueroterapia</strong> es un tratamiento especializado que administra vitaminas, minerales
+            y antioxidantes directamente en el torrente sanguíneo para una absorción inmediata.
+            Ideal para fortalecer el sistema inmune, mejorar la hidratación profunda de la piel,
+            combatir el cansancio y potenciar la salud integral. Un aliado perfecto para potenciar
+            los resultados de tus tratamientos estéticos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="section" id="instagram">
+      <div class="container">
+        <h2 class="section-title">Síguenos en Instagram</h2>
+        <p class="section-subtitle">Conoce nuestros resultados y promociones en tiempo real</p>
+        <div class="section-divider">
+          <span class="section-divider__diamond">◆</span>
+        </div>
+
+        <div class="instagram-cta">
+          <div class="instagram-grid">
+            <div class="instagram-grid__item">
+              <span>@vitala</span>
+              <img src="assets/images/placeholder-ig-1.jpg" alt="Instagram VITALA 1" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="instagram-grid__item">
+              <span>@vitala</span>
+              <img src="assets/images/placeholder-ig-2.jpg" alt="Instagram VITALA 2" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="instagram-grid__item">
+              <span>@vitala</span>
+              <img src="assets/images/placeholder-ig-3.jpg" alt="Instagram VITALA 3" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="instagram-grid__item">
+              <span>@vitala</span>
+              <img src="assets/images/placeholder-ig-4.jpg" alt="Instagram VITALA 4" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="instagram-grid__item">
+              <span>@vitala</span>
+              <img src="assets/images/placeholder-ig-5.jpg" alt="Instagram VITALA 5" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="instagram-grid__item">
+              <span>@vitala</span>
+              <img src="assets/images/placeholder-ig-6.jpg" alt="Instagram VITALA 6" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="instagram-grid__item">
+              <span>@vitala</span>
+              <img src="assets/images/placeholder-ig-7.jpg" alt="Instagram VITALA 7" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="instagram-grid__item">
+              <span>@vitala</span>
+              <img src="assets/images/placeholder-ig-8.jpg" alt="Instagram VITALA 8" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="instagram-grid__item">
+              <span>@vitala</span>
+              <img src="assets/images/placeholder-ig-9.jpg" alt="Instagram VITALA 9" loading="lazy" onerror="this.style.display='none'">
+            </div>
+          </div>
+          <p>Sigue nuestra galería de resultados y promociones exclusivas</p>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="btn btn--secondary">Seguir en Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        <div class="section-divider">
+          <span class="section-divider__diamond">◆</span>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Qué cuidados debo tener tras una cauterización de lunares?
+              <span class="faq-question__icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Evita exponer la zona al sol directo durante al menos 2 semanas. No rasques ni manipules
+                la costra que se forma &mdash; se desprenderá sola en 7 a 14 días. Mantén el área limpia y seca,
+                y aplica el protector solar indicado una vez la piel haya sanado completamente.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Cuánto duran los resultados del Plasma Rico en Plaquetas?
+              <span class="faq-question__icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Los resultados del PRP son visibles desde la primera sesión y se potencian con el tiempo
+                a medida que el colágeno se regenera. Se recomienda un ciclo inicial de 3 sesiones
+                con intervalo de 4 a 6 semanas entre cada una, con mantenimiento cada 6 a 12 meses
+                según el tipo de piel y los objetivos del tratamiento.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Cómo prepararme para una sesión de masaje o sueroterapia?
+              <span class="faq-question__icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Para masajes: llega con ropa cómoda, evita comidas pesadas 2 horas antes y mantente
+                hidratado. Para sueroterapia: es ideal llegar bien hidratado y haber comido algo ligero.
+                En ambos casos, informa a tu terapeuta sobre cualquier condición médica o alergia.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Cuál es la política de cancelación o reprogramación?
+              <span class="faq-question__icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Aceptamos cambios y cancelaciones sin costo hasta 24 horas antes de tu cita.
+                Cancelaciones con menos de 24 horas de anticipación podrían generar un cargo del 50%
+                del valor del servicio. Agradecemos tu comprensión para poder brindar atención a todos
+                nuestros clientes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENDAMIENTO (DOBLE VÍA) -->
+    <section class="section agenda" id="agendamiento">
+      <div class="container">
+        <h2 class="section-title">Agenda tu Cita</h2>
+        <p class="section-subtitle">Elige cómo quieres agendar</p>
+        <div class="section-divider">
+          <span class="section-divider__diamond">◆</span>
+        </div>
+
+        <div class="agenda__tabs">
+          <button class="agenda-tab active" data-agenda-tab="calendly">Agenda Online</button>
+          <button class="agenda-tab" data-agenda-tab="whatsapp">WhatsApp</button>
+        </div>
+
+        <!-- TAB 1: CALENDLY / SETMORE -->
+        <div class="agenda__panel active" id="agendaCalendly">
+          <div class="agenda__placeholder">
+            <p>🔌 Integrar widget de Calendly o Setmore aquí</p>
+            <p style="font-size:0.82rem; opacity:0.5; margin-top:0.5rem;">
+              Crea una cuenta gratuita en Calendly o Setmore, copia el código embed y pégalo aquí.
+            </p>
+          </div>
+        </div>
+
+        <!-- TAB 2: FORMULARIO WHATSAPP -->
+        <div class="agenda__panel" id="agendaWhatsApp">
+          <form class="form" id="waForm">
+            <div class="form-group">
+              <label for="waNombre">Nombre completo *</label>
+              <input type="text" id="waNombre" name="nombre" required placeholder="Ej: María Pérez">
+            </div>
+
+            <div class="form-group">
+              <label for="waTelefono">Teléfono / WhatsApp *</label>
+              <input type="tel" id="waTelefono" name="telefono" required placeholder="Ej: 300 123 4567">
+            </div>
+
+            <div class="form-group">
+              <label for="waServicio">Servicio de interés *</label>
+              <select id="waServicio" name="servicio" required>
+                <option value="">Selecciona un servicio...</option>
+                <optgroup label="Faciales">
+                  <option value="Limpieza Facial Profunda">Limpieza Facial Profunda &mdash; .000</option>
+                  <option value="Plasma Rico en Plaquetas">Plasma Rico en Plaquetas &mdash; .000</option>
+                  <option value="Limpieza Facial Profunda + Plasma Facial">Limpieza + PRP &mdash; .000</option>
+                  <option value="Tratamiento Despigmentante">Tratamiento Despigmentante &mdash; .000</option>
+                  <option value="Tratamiento Reafirmante Facial">Tratamiento Reafirmante &mdash; .000</option>
+                  <option value="Tratamiento Hidratante">Tratamiento Hidratante &mdash; .000</option>
+                  <option value="Tratamiento Acné">Tratamiento Acné &mdash; .000</option>
+                </optgroup>
+                <optgroup label="Cauterización">
+                  <option value="Cauterización - Tamaño Pequeño">Cauterización Pequeño &mdash; .000</option>
+                  <option value="Cauterización - Tamaño Mediano">Cauterización Mediano &mdash; .000</option>
+                  <option value="Cauterización - Tamaño Grande">Cauterización Grande &mdash; .000</option>
+                </optgroup>
+                <optgroup label="Corporales">
+                  <option value="Paquete 8 Sesiones Corporales">Paquete 8 Sesiones &mdash; .000</option>
+                  <option value="Paquete 12 Sesiones Corporales">Paquete 12 Sesiones &mdash; .000</option>
+                </optgroup>
+                <optgroup label="Masajes">
+                  <option value="Masaje Relajante">Masaje Relajante &mdash; .000</option>
+                  <option value="Masaje Relajante con Chocolaterapia">Masaje + Chocolaterapia &mdash; .000</option>
+                  <option value="Baño de Luna + Masaje Relajante">Baño de Luna + Masaje &mdash; .000</option>
+                  <option value="Masaje Relajante + Bambú Terapia">Masaje + Bambú Terapia &mdash; .000</option>
+                </optgroup>
+                <optgroup label="Promociones">
+                  <option value="Promo 2 Limpiezas Faciales">Promo 2 Limpiezas &mdash; .000</option>
+                  <option value="Promo Limpieza Facial + Plasma">Promo Limpieza + PRP &mdash; .000</option>
+                  <option value="Ritual Vitala">Ritual Vitala &mdash; .000</option>
+                  <option value="Momento Zen">Momento Zen &mdash; .000</option>
+                  <option value="Experiencia Vitala Premium">Experiencia Premium &mdash; .000</option>
+                </optgroup>
+                <optgroup label="Bienestar">
+                  <option value="Sueroterapia">Sueroterapia</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="waFecha">Fecha preferida *</label>
+              <input type="date" id="waFecha" name="fecha" required>
+            </div>
+
+            <div class="form-group">
+              <label for="waHora">Hora preferida *</label>
+              <input type="time" id="waHora" name="hora" required>
+            </div>
+
+            <div class="form-group">
+              <label for="waNotas">Notas adicionales</label>
+              <textarea id="waNotas" name="notas" placeholder="Ej: Primera vez que visito, ¿tienen parqueadero?"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--whatsapp" style="width:100%;">
+              Enviar a WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contacto">
+    <div class="footer__logo">VITALA</div>
+    <p class="footer__sub">Cosmetología • Estética • Bienestar</p>
+    <div class="footer__info">
+      <p>Ayxa González — Cosmetóloga y Esteticista</p>
+      <a href="tel:+573006273575">📞 300 627 3575</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">📷 @vitala</a>
+    </div>
+    <div class="footer__social">
+      <a href="https://wa.me/573006273575" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+    </div>
+    <p class="footer__copy">&copy; 2026 VITALA. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <div class="whatsapp-float">
+    <span class="whatsapp-float__label">¿Necesitas ayuda?</span>
+    <a href="https://wa.me/573006273575" target="_blank" rel="noopener" class="whatsapp-float__btn" aria-label="WhatsApp">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H5l1.5-3A8.5 8.5 0 1 1 21 11.5z"/>
+        <path d="M9 9.5a.5.5 0 0 1 .5-.5h.5a.5.5 0 0 1 .5.5v.5a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5z"/>
+        <path d="M14 9.5a.5.5 0 0 1 .5-.5h.5a.5.5 0 0 1 .5.5v.5a.5.5 0 0 1-.5.5h-.5a.5.5 0 0 1-.5-.5z"/>
+        <path d="M9 13.5c.5 1 1.5 1.5 3 1.5s2.5-.5 3-1.5"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+  <script src="js/ui-effects.js"></script>
+  <script src="js/calendar.js"></script>
+
+</body>
+</html>
