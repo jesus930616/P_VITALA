@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 130" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4B88C"/>
+      <stop offset="50%" stop-color="#E8D5A8"/>
+      <stop offset="100%" stop-color="#C4A46C"/>
+    </linearGradient>
+    <linearGradient id="shimmerGradLight" x1="-200%" y1="0%" x2="300%" y2="0%">
+      <stop offset="0%" stop-color="#D4B88C" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#F0E0B8" stop-opacity="0.6"/>
+      <stop offset="45%" stop-color="#F8F0D8" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="#F0E0B8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#D4B88C" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="textClipFooter">
+      <text x="200" y="68" text-anchor="middle" font-size="50" font-weight="700" font-family="'Playfair Display', Georgia, serif" letter-spacing="7">VITALA</text>
+    </clipPath>
+  </defs>
+
+  <style>
+    .diamond-grp { animation: diamondIn 1.2s ease forwards; }
+    .diamond-sym { animation: diamondGlow 5s ease-in-out infinite; }
+    .text-main { animation: textIn 0.8s ease 0.3s both; }
+    .shimmer-rect { animation: shimmerSweep 8s ease-in-out 2s infinite; }
+    .deco-line-l, .deco-line-r { stroke-dasharray: 200; animation: lineDraw 1s ease 0.6s both; }
+    .text-sub { animation: textIn 0.6s ease 0.9s both; }
+
+    @keyframes diamondIn {
+      from { opacity: 0; transform: scale(0) rotate(-90deg); }
+      to { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+    @keyframes diamondGlow {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.06); }
+    }
+    @keyframes textIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes lineDraw {
+      from { stroke-dashoffset: 200; opacity: 0; }
+      to { stroke-dashoffset: 0; opacity: 0.35; }
+    }
+    @keyframes shimmerSweep {
+      0% { transform: translateX(-100%); }
+      20% { transform: translateX(100%); }
+      100% { transform: translateX(100%); }
+    }
+  </style>
+
+  <!-- Decorative lines -->
+  <line class="deco-line-l" x1="35" y1="52" x2="130" y2="52" stroke="url(#goldGradLight)" stroke-width="0.7"/>
+  <line class="deco-line-r" x1="270" y1="52" x2="365" y2="52" stroke="url(#goldGradLight)" stroke-width="0.7"/>
+
+  <!-- Diamond symbol -->
+  <g class="diamond-grp">
+    <text class="diamond-sym" x="200" y="42" text-anchor="middle" font-size="16" fill="url(#goldGradLight)" font-family="serif">&#9670;</text>
+  </g>
+
+  <!-- VITALA text -->
+  <text class="text-main" x="200" y="68" text-anchor="middle" font-size="50" font-weight="700" fill="url(#goldGradLight)" font-family="'Playfair Display', Georgia, serif" letter-spacing="7">VITALA</text>
+
+  <!-- Shimmer overlay -->
+  <rect class="shimmer-rect" clip-path="url(#textClipFooter)" x="0" y="0" width="400" height="130" fill="url(#shimmerGradLight)"/>
+
+  <!-- Tagline -->
+  <text class="text-sub" x="200" y="102" text-anchor="middle" font-size="10" fill="#C37A80" font-family="'Montserrat', 'Helvetica Neue', sans-serif" font-weight="400" letter-spacing="4" opacity="0.85">COSMETOLOGÍA · ESTÉTICA · BIENESTAR</text>
+
+  <!-- Ayxa González line -->
+  <text class="text-sub" x="200" y="118" text-anchor="middle" font-size="7.5" fill="rgba(195,122,128,0.6)" font-family="'Montserrat', 'Helvetica Neue', sans-serif" font-weight="300" letter-spacing="3">AYXA GONZÁLEZ — COSMETÓLOGA Y ESTETICISTA</text>
+</svg>

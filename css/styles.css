@@ -146,11 +146,27 @@ input, select, textarea {
 }
 
 .header__logo {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--gold);
-  letter-spacing: 0.15em;
+  display: flex;
+  align-items: center;
+  transition: transform var(--transition-med);
+}
+.header__logo:hover {
+  transform: scale(1.03);
+}
+.header__logo-img {
+  height: 32px;
+  width: auto;
+  display: block;
+  animation: logoReveal 0.8s ease both;
+  transition: filter var(--transition-med);
+  filter: drop-shadow(0 1px 2px rgba(196, 164, 108, 0.1));
+}
+.header__logo:hover .header__logo-img {
+  filter: drop-shadow(0 2px 8px rgba(196, 164, 108, 0.3));
+}
+@keyframes logoReveal {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .header__toggle {
@@ -809,12 +825,15 @@ input, select, textarea {
   text-align: center;
 }
 .footer__logo {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--gold);
-  letter-spacing: 0.15em;
-  margin-bottom: 0.5rem;
+  height: 36px;
+  width: auto;
+  display: block;
+  margin: 0 auto 0.5rem;
+  animation: logoReveal 1s ease 0.3s both;
+  transition: filter var(--transition-med), opacity var(--transition-med);
+}
+.footer__logo:hover {
+  filter: brightness(1.1);
 }
 .footer__sub {
   font-size: 0.8rem;
@@ -927,6 +946,8 @@ input, select, textarea {
 /* Tablet (768px+) */
 @media (min-width: 768px) {
   :root { --header-height: 80px; }
+  .header__logo-img { height: 40px; }
+  .footer__logo { height: 44px; }
 
   .header__toggle { display: none; }
   .header__nav {

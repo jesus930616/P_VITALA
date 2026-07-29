@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C4A46C"/>
+      <stop offset="50%" stop-color="#D4B88C"/>
+      <stop offset="100%" stop-color="#B89960"/>
+    </linearGradient>
+    <linearGradient id="shimmerGrad" x1="-200%" y1="0%" x2="300%" y2="0%">
+      <stop offset="0%" stop-color="#C4A46C" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#E8D5A8" stop-opacity="0.8"/>
+      <stop offset="45%" stop-color="#F5EBC8" stop-opacity="1"/>
+      <stop offset="55%" stop-color="#E8D5A8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#C4A46C" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="textClip">
+      <text x="180" y="64" text-anchor="middle" font-size="44" font-weight="700" font-family="'Playfair Display', Georgia, serif" letter-spacing="6">VITALA</text>
+    </clipPath>
+  </defs>
+
+  <style>
+    .diamond-grp { animation: diamondIn 1.2s ease forwards; }
+    .diamond-sym { animation: diamondGlow 4s ease-in-out infinite; }
+    .text-main { animation: textIn 0.8s ease 0.3s both; }
+    .shimmer-rect { animation: shimmerSweep 6s ease-in-out 1.5s infinite; }
+    .deco-line-l, .deco-line-r { stroke-dasharray: 200; animation: lineDraw 1s ease 0.6s both; }
+    .text-sub { animation: textIn 0.6s ease 0.8s both; }
+
+    @keyframes diamondIn {
+      from { opacity: 0; transform: scale(0) rotate(-90deg); }
+      to { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+    @keyframes diamondGlow {
+      0%, 100% { opacity: 0.7; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.08); }
+    }
+    @keyframes textIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes lineDraw {
+      from { stroke-dashoffset: 200; opacity: 0; }
+      to { stroke-dashoffset: 0; opacity: 0.5; }
+    }
+    @keyframes shimmerSweep {
+      0% { transform: translateX(-100%); }
+      20% { transform: translateX(100%); }
+      100% { transform: translateX(100%); }
+    }
+  </style>
+
+  <!-- Decorative lines -->
+  <line class="deco-line-l" x1="30" y1="50" x2="120" y2="50" stroke="url(#goldGrad)" stroke-width="0.7"/>
+  <line class="deco-line-r" x1="240" y1="50" x2="330" y2="50" stroke="url(#goldGrad)" stroke-width="0.7"/>
+
+  <!-- Diamond symbol -->
+  <g class="diamond-grp">
+    <text class="diamond-sym" x="180" y="40" text-anchor="middle" font-size="14" fill="url(#goldGrad)" font-family="serif">&#9670;</text>
+  </g>
+
+  <!-- VITALA text -->
+  <text class="text-main" x="180" y="64" text-anchor="middle" font-size="44" font-weight="700" fill="url(#goldGrad)" font-family="'Playfair Display', Georgia, serif" letter-spacing="6">VITALA</text>
+
+  <!-- Shimmer overlay -->
+  <rect class="shimmer-rect" clip-path="url(#textClip)" x="0" y="0" width="360" height="100" fill="url(#shimmerGrad)"/>
+
+  <!-- Tagline -->
+  <text class="text-sub" x="180" y="88" text-anchor="middle" font-size="8.5" fill="#C37A80" font-family="'Montserrat', 'Helvetica Neue', sans-serif" font-weight="400" letter-spacing="4">COSMETOLOGÍA · ESTÉTICA · BIENESTAR</text>
+</svg>

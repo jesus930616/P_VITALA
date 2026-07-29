@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ===== AGENDAMIENTO TABS ===== */
   const agendaTabs = document.querySelectorAll('[data-agenda-tab]');
   const agendaPanels = {
     calendly: document.getElementById('agendaCalendly'),
@@ -19,40 +20,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ===== FORMULARIO → WHATSAPP ===== */
   const waForm = document.getElementById('waForm');
   if (waForm) {
     waForm.addEventListener('submit', e => {
       e.preventDefault();
       const fd = new FormData(waForm);
-      const n = fd.get('nombre')?.trim() || 'Cliente';
-      const t = fd.get('telefono')?.trim() || '';
-      const s = fd.get('servicio') || 'No especificado';
-      const f = fd.get('fecha') || '';
-      const h = fd.get('hora') || '';
+      const nombre = fd.get('nombre')?.trim() || 'Cliente';
+      const telefono = fd.get('telefono')?.trim() || '';
+      const servicio = fd.get('servicio') || 'No especificado';
+      const fecha = fd.get('fecha') || '';
+      const hora = fd.get('hora') || '';
       const notas = fd.get('notas')?.trim();
 
-      const fechaOk = f
-        ? new Date(f + 'T12:00:00').toLocaleDateString('es-CO', {
+      const fechaOk = fecha
+        ? new Date(fecha + 'T12:00:00').toLocaleDateString('es-CO', {
             year: 'numeric', month: 'long', day: 'numeric'
           })
         : 'Sin fecha';
 
-      let msg = `Hola, soy ${n}.`;
-      msg += ` Me gustaría agendar el servicio: ${s}.`;
-      msg += ` Para el día ${fechaOk} a las ${h}.`;
-      if (t) msg += ` Mi teléfono es ${t}.`;
-      if (notas) msg += ` Notas: ${notas}.`;
+      let msg = 'Hola, soy ' + nombre + '.';
+      msg += ' Me gustaría agendar el servicio: ' + servicio + '.';
+      msg += ' Para el día ' + fechaOk + ' a las ' + hora + '.';
+      if (telefono) msg += ' Mi teléfono es ' + telefono + '.';
+      if (notas) msg += ' Notas: ' + notas + '.';
       msg += ' Quedo atento a su confirmación.';
 
-      window.open(`https://wa.me/573006273575?text=${encodeURIComponent(msg)}`, '_blank');
+      window.open('https://wa.me/573006273575?text=' + encodeURIComponent(msg), '_blank');
     });
   }
 
+  /* ===== FECHA MÍNIMA ===== */
   const fi = document.getElementById('waFecha');
   if (fi) {
     const hoy = new Date();
-    fi.setAttribute('min',
-      `${hoy.getFullYear()}-${String(hoy.getMonth()+1).padStart(2,'0')}-${String(hoy.getDate()).padStart(2,'0')}`
-    );
+    const y = hoy.getFullYear();
+    const m = String(hoy.getMonth() + 1).padStart(2, '0');
+    const d = String(hoy.getDate()).padStart(2, '0');
+    fi.setAttribute('min', y + '-' + m + '-' + d);
   }
+
 });
