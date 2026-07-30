@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -7,7 +7,7 @@
   <title>VITALA — Cosmetología • Estética • Bienestar</title>
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/styles.css">
-</head>
+</head>l
 <body>
 
   <!-- HEADER -->
@@ -597,45 +597,51 @@
               <input type="tel" id="waTelefono" name="telefono" required placeholder="Ej: 300 123 4567">
             </div>
 
-            <div class="form-group">
-              <label for="waServicio">Servicio de interés *</label>
-              <select id="waServicio" name="servicio" required>
-                <option value="">Selecciona un servicio...</option>
-                <optgroup label="Faciales">
-                  <option value="Limpieza Facial Profunda">Limpieza Facial Profunda &mdash; $80.000</option>
-                  <option value="Plasma Rico en Plaquetas">Plasma Rico en Plaquetas &mdash; $160.000</option>
-                  <option value="Limpieza Facial Profunda + Plasma Facial">Limpieza + PRP &mdash; $240.000</option>
-                  <option value="Tratamiento Despigmentante">Tratamiento Despigmentante &mdash; $120.000</option>
-                  <option value="Tratamiento Reafirmante Facial">Tratamiento Reafirmante &mdash; $120.000</option>
-                  <option value="Tratamiento Hidratante">Tratamiento Hidratante &mdash; $130.000</option>
-                  <option value="Tratamiento para Acné">Tratamiento para Acné &mdash; $120.000</option>
-                </optgroup>
-                <optgroup label="Cauterización">
-                  <option value="Cauterización - Tamaño Pequeño">Cauterización Pequeño &mdash; $50.000</option>
-                  <option value="Cauterización - Tamaño Mediano">Cauterización Mediano &mdash; $60.000</option>
-                  <option value="Cauterización - Tamaño Grande">Cauterización Grande &mdash; $80.000</option>
-                </optgroup>
-                <optgroup label="Corporales">
-                  <option value="Paquete 8 Sesiones Corporales">Paquete 8 Sesiones &mdash; $400.000</option>
-                  <option value="Paquete 12 Sesiones Corporales">Paquete 12 Sesiones &mdash; $570.000</option>
-                </optgroup>
-                <optgroup label="Masajes">
-                  <option value="Masaje Relajante">Masaje Relajante &mdash; $80.000</option>
-                  <option value="Masaje Relajante con Chocolaterapia">Masaje + Chocolaterapia &mdash; $120.000</option>
-                  <option value="Baño de Luna + Masaje Relajante">Baño de Luna + Masaje &mdash; $160.000</option>
-                  <option value="Masaje Relajante + Bambú Terapia">Masaje + Bambú Terapia &mdash; $110.000</option>
-                </optgroup>
-                <optgroup label="Promociones">
-                  <option value="Promo 2 Limpiezas Faciales">Promo 2 Limpiezas &mdash; $140.000</option>
-                  <option value="Promo Limpieza Facial + Plasma">Promo Limpieza + PRP &mdash; $170.000</option>
-                  <option value="Ritual Vitala">Ritual Vitala &mdash; $60.000</option>
-                  <option value="Momento Zen">Momento Zen &mdash; $130.000</option>
-                  <option value="Experiencia Vitala Premium">Experiencia Premium &mdash; $180.000</option>
-                </optgroup>
-                <optgroup label="Bienestar">
-                  <option value="Sueroterapia">Sueroterapia</option>
-                </optgroup>
-              </select>
+            <div class="form-group" id="waServicioGroup">
+              <label>Servicio(s) de interés *</label>
+              <div id="waServicioContainer">
+                <div class="servicio-row">
+                  <select class="wa-servicio-select" name="servicio" required>
+                    <option value="">Selecciona un servicio...</option>
+                    <optgroup label="Faciales">
+                      <option value="Limpieza Facial Profunda">Limpieza Facial Profunda &mdash; $80.000</option>
+                      <option value="Plasma Rico en Plaquetas">Plasma Rico en Plaquetas &mdash; $160.000</option>
+                      <option value="Limpieza Facial Profunda + Plasma Facial">Limpieza + PRP &mdash; $240.000</option>
+                      <option value="Tratamiento Despigmentante">Tratamiento Despigmentante &mdash; $120.000</option>
+                      <option value="Tratamiento Reafirmante Facial">Tratamiento Reafirmante &mdash; $120.000</option>
+                      <option value="Tratamiento Hidratante">Tratamiento Hidratante &mdash; $130.000</option>
+                      <option value="Tratamiento para Acné">Tratamiento para Acné &mdash; $120.000</option>
+                    </optgroup>
+                    <optgroup label="Cauterización">
+                      <option value="Cauterización - Tamaño Pequeño">Cauterización Pequeño &mdash; $50.000</option>
+                      <option value="Cauterización - Tamaño Mediano">Cauterización Mediano &mdash; $60.000</option>
+                      <option value="Cauterización - Tamaño Grande">Cauterización Grande &mdash; $80.000</option>
+                    </optgroup>
+                    <optgroup label="Corporales">
+                      <option value="Paquete 8 Sesiones Corporales">Paquete 8 Sesiones &mdash; $400.000</option>
+                      <option value="Paquete 12 Sesiones Corporales">Paquete 12 Sesiones &mdash; $570.000</option>
+                    </optgroup>
+                    <optgroup label="Masajes">
+                      <option value="Masaje Relajante">Masaje Relajante &mdash; $80.000</option>
+                      <option value="Masaje Relajante con Chocolaterapia">Masaje + Chocolaterapia &mdash; $120.000</option>
+                      <option value="Baño de Luna + Masaje Relajante">Baño de Luna + Masaje &mdash; $160.000</option>
+                      <option value="Masaje Relajante + Bambú Terapia">Masaje + Bambú Terapia &mdash; $110.000</option>
+                    </optgroup>
+                    <optgroup label="Promociones">
+                      <option value="Promo 2 Limpiezas Faciales">Promo 2 Limpiezas &mdash; $140.000</option>
+                      <option value="Promo Limpieza Facial + Plasma">Promo Limpieza + PRP &mdash; $170.000</option>
+                      <option value="Ritual Vitala">Ritual Vitala &mdash; $60.000</option>
+                      <option value="Momento Zen">Momento Zen &mdash; $130.000</option>
+                      <option value="Experiencia Vitala Premium">Experiencia Premium &mdash; $180.000</option>
+                    </optgroup>
+                    <optgroup label="Bienestar">
+                      <option value="Sueroterapia">Sueroterapia</option>
+                    </optgroup>
+                  </select>
+                  <button type="button" class="servicio-row__remove" aria-label="Quitar servicio" hidden>&times;</button>
+                </div>
+              </div>
+              <button type="button" class="btn btn--add-servicio" id="addServicioBtn">+ Agregar otro servicio</button>
             </div>
 
             <div class="form-group">

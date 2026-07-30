@@ -772,6 +772,54 @@ input, select, textarea {
   opacity: 0.6;
 }
 
+/* ===== MULTI-SERVICIO ===== */
+.servicio-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: start;
+  margin-bottom: 0.75rem;
+}
+.servicio-row:last-child {
+  margin-bottom: 0;
+}
+.servicio-row select {
+  flex: 1;
+}
+.servicio-row__remove {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--gold-light);
+  border-radius: var(--radius-sm);
+  color: var(--rose-primary);
+  font-size: 1.3rem;
+  background: var(--bg-main);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+.servicio-row__remove:hover {
+  border-color: var(--rose-primary);
+  color: var(--rose-btn-hover);
+}
+.btn--add-servicio {
+  align-self: flex-start;
+  font-size: 0.82rem;
+  color: var(--gold);
+  padding: 0.4rem 0;
+  border-bottom: 1px dashed var(--gold-light);
+  border-radius: 0;
+  background: none;
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+.btn--add-servicio:hover {
+  color: var(--rose-primary);
+  border-color: var(--rose-primary);
+}
+
 /* ===== FORM ===== */
 .form {
   background: #fff;
